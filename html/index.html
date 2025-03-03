@@ -58,7 +58,7 @@
           <!-- Team Members -->
           <section class="team-content">
                <div class="glass-panel">
-                    <div class="team-members">
+                    <div class="team-members" id="studentsList">
                          <div class="content-card">
                               <img src="https://www.hobbybunker.com/userfiles/media/images/101540/large_Bismarck.jpg"
                                    alt="Avatar" class="avatar">
@@ -137,19 +137,7 @@
                                    <a href="#" class="btn-card"><i class="ri-login-box-fill"></i></a>
                               </p>
                          </div>
-                         <div class="content-card">
-                              <img src="https://media.licdn.com/dms/image/C4D03AQEHycGfZ5Gnhg/profile-displayphoto-shrink_800_800/0/1516522723425?e=2147483647&v=beta&t=trkBbPulUH_Hq3tvr0mXqiZ1yutwH1pvDLHvUnoZnzo"
-                                   alt="Avatar" class="avatar">
-                              <h2>Carlos René Angarita Sanguino</h2>
-                              <p>Principal Investigator UFPS</p>
-                              <p class="icons">
-                                   <a href="https://github.com/adolfoalejandroar" class="btn-card"><i
-                                             class="ri-github-fill"></i></a>
-                                   <a href="https://gitlab.com/adolfoalejandroar" class="btn-card"><i
-                                             class="ri-gitlab-fill"></i></a>
-                                   <a href="#" class="btn-card"><i class="ri-login-box-fill"></i></a>
-                              </p>
-                         </div>
+
                     </div>
                </div>
           </section>
@@ -161,6 +149,22 @@
                </div>
           </footer>
      </div>
+
+
+     <template id="studentCardTemplate">
+          <div class="content-card">
+               <img src="" alt="Avatar" class="avatar">
+               <h2 class="userName">Carlos René Angarita Sanguino</h2>
+               <p class="email">Principal Investigator UFPS</p>
+               <p class="icons">
+                    <a href="https://github.com/adolfoalejandroar" class="btn-card"><i class="ri-github-fill"></i></a>
+                    <a href="https://gitlab.com/adolfoalejandroar" class="btn-card"><i class="ri-gitlab-fill"></i></a>
+                    <a href="#" class="btn-card"><i class="ri-login-box-fill"></i></a>
+               </p>
+          </div>
+     </template>
+
+     <script src="../js/app.js"></script>
 </body>
 
 </html>
