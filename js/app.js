@@ -1,50 +1,59 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Sample student data
-    const students = [
-        {
-            name: 'Carlos Rene Angarita Sanguino',
-            id: '05372',
-            email: 'carlosreneas@ufps.edu.co',
-            github: 'GitHub',
-            image: 'https://media.licdn.com/dms/image/C4D03AQEHycGfZ5Gnhg/profile-displayphoto-shrink_800_800/0/1516522723425?e=2147483647&v=beta&t=trkBbPulUH_Hq3tvr0mXqiZ1yutwH1pvDLHvUnoZnzo'
-        },
-        {
-            name: 'Yan Carlo Angarita Sanguino',
-            id: '00001',
-            email: 'yancarlo120b@gmail.com',
-            github: 'GitHub',
-            image: 'https://media.licdn.com/dms/image/C4D03AQEHycGfZ5Gnhg/profile-displayphoto-shrink_800_800/0/1516522723425?e=2147483647&v=beta&t=trkBbPulUH_Hq3tvr0mXqiZ1yutwH1pvDLHvUnoZnzo'
-        },
-        {
-            name: 'Claudia Yamile Gomez Llanez',
-            id: '05096',
-            email: 'claudiaygomez@ufps.edu.co',
-            github: 'GitHub',
-            image: 'https://media.licdn.com/dms/image/C4D03AQEHycGfZ5Gnhg/profile-displayphoto-shrink_800_800/0/1516522723425?e=2147483647&v=beta&t=trkBbPulUH_Hq3tvr0mXqiZ1yutwH1pvDLHvUnoZnzo'
-        }
-    ];
+document.addEventListener('DOMContentLoaded', async () => {
 
     const studentsList = document.getElementById('studentsList');
     const template = document.getElementById('studentCardTemplate');
 
     // Render students
-    function renderStudents() {
+    async function renderStudents() {
+        const students = await api.getStudents();
         studentsList.innerHTML = '';
         students.forEach(student => {
-            console.log(student.name);
+            console.log(student);
 
             const clone = template.content.cloneNode(true);
 
             clone.querySelector('.userName').textContent = student.name;
             clone.querySelector('.email').textContent = student.email;
-            clone.querySelector('.avatar').src = student.image;
-            clone.querySelector('.btn-card').href = 'https://github.com/${student.github}';
+            clone.querySelector('.avatar').src = student.photo;
+            clone.querySelector('.github').href = student.github_link;
+            clone.querySelector('.code').textContent = student.code;
 
             studentsList.appendChild(clone);
         });
     }
 
     // Initial render
-    renderStudents();
+    await renderStudents();
 
+});
+
+document.getElementById('submit').addEventListener('click', async (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const code = document.getElementById('code').value;
+    const email = document.getElementById('email').value;
+    const github = document.getElementById('github').value;
+    const photo = document.getElementById('photourl').value;
+    const description = document.getElementById('description').value;
+
+    const student = {
+        name,
+        code,
+        email,
+        github_link: github,
+        photo,
+        description
+    };
+
+    console.log('Creating student:', student);
+
+    try {
+        await api.createStudent(student);
+        alert('Student created successfully!');
+        window.location.href = './index.html';
+    } catch (error) {
+        console.error('Error creating student:', error);
+        alert('Failed to create student.');
+    }
 });
