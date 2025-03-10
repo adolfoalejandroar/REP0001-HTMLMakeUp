@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <title>Team Catalog</title>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="../css/index/stage-components.css" rel="stylesheet">
+     <link href="../css/index/default-components.css" rel="stylesheet">
+     <link href="../css/index/custom-components.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+     <!-- Background -->
+     <div class="background">
+          <img src="../resources/src0005-cilinder.png" class="cylinder" style="top: 40%; left: 50%;">
+          <img src="../resources/src0003-sphere.png" class="sphere-3" style="top: 10%; left: 10%;">
+          <img src="../resources/src0001-sphere.png" class="sphere-1" style="top: 20%; left: 40%;">
+          <img src="../resources/src0001-sphere.png" class="sphere-1" style="top: 100%; left: 10%;">
+          <img src="../resources/src0002-sphere.png" class="sphere-2" style="top: 20%; left: 60%;">
+     </div>
+
+     <!-- Content -->
+     <div class="content">
+
+          <!-- Header -->
+          <header>
+               <div class="glass-sup-sheet">
+                    <div class="mid-right-container">
+                         <img src="../resources/src0004-icon.png" alt="Exfora Logo" class="logo-header">
+                    </div>
+                    <div class="textgroup-header">
+                         <h1>Team Catalog</h1>
+                         <p>Use the principal team viewer below</p>
+                    </div>
+               </div>
+          </header>
+
+          <!-- Navigation -->
+          <section class="navigation">
+               <div class="glass-panel" style="align-items: left; justify-content: left;">
+                    <nav class="navigation-var">
+                         <ul class="menuItems">
+                              <li><a href='./signUpForm.html'>Add Worker</a></li>
+                              <li><a href='#'>Delete Worker</a></li>
+                              <li class="search-box">
+                                   <div class="glass-panel" style="background: rgba(255, 255, 255, 0.6);">
+                                        <button class="btn-search"><i class="fas fa-search"></i></button>
+                                        <input type="text" class="input-search" placeholder="Type to Search...">
+                                   </div>
+                              </li>
+                         </ul>
+                    </nav>
+               </div>
+          </section>
+
+          <!-- Team Members -->
+          <section class="team-content">
+               <div class="glass-panel">
+                    <div class="team-members" id="studentsList"></div>
+               </div>
+          </section>
+
+          <!-- Footer -->
+          <footer>
+               <div class="glass-btm-sheet">
+                    <p>© 2021 Adolfo Alejandro Arenas Ramos. All rights reserved.</p>
+               </div>
+          </footer>
+     </div>
+
+
+     <template id="studentCardTemplate">
+          <div class="content-card">
+               <img src="https://cdn1.iconfinder.com/data/icons/line-design-business-set-4/21/people-customer-unknown-1024.png"
+                    alt="Avatar" class="avatar" id="studentAvatar">
+               <h2 class="userName"></h2>
+               <p class="email"></p>
+               <p class="code"></p>
+               <p class="icons">
+                    <button class="btn-card" id="github-btn"><i class="ri-github-fill"></i></button>
+                    <button class="btn-card" id=""><i class="ri-info-card-line"></i></button>
+                    <button class="btn-card" id="edit-btn"><i class="ri-edit-circle-fill"></i></button>
+               </p>
+          </div>
+     </template>
+
+     <template id="studentEditCard">
+          <div class="edit-profile-panel glass-panel">
+               <div class="modal-content">
+                    <h2>Edit Profile -</h2>
+                    <div class="field-row">
+                         <label for="name">Name:</label>
+                         <input class="glass-panel" type="text" id="edit-name" name="name" value="" required>
+                    </div>
+                    <div class="field-row">
+                         <label for="email">Email:</label>
+                         <input class="glass-panel" type="email" id="edit-email" name="email" value="" required>
+                    </div>
+                    <div class="field-row">
+                         <label for="img-url">Image:</label>
+                         <input class="glass-panel" type="text" id="edit-img" name="img-url" value="" required>
+                    </div>
+                    <div class="field-row">
+                         <label for="github">Github:</label>
+                         <input class="glass-panel" type="text" id="edit-github" name="github" value="" required>
+                    </div>
+                    <div class="field-row description-area-1">
+                         <label for="descript">Description:</label>
+                         <textarea class="glass-panel description-area-1" style="min-height: 300px; resize: none;" type="text" id="edit-descript" name="descript"
+                              value="" required></textarea>
+                    </div>
+                    <div class="field-row">
+                         <button class="btn-save glass-panel" id="edit"><i class="ri-check-line"></i></button>
+                    </div>
+               </div>
+               <span class="close"><i class="ri-close-circle-fill"></i></span>
+          </div>
+     </template>
+
+     <script src="../js/api.js"></script>
+     <script src="../js/app.js"></script>
+</body>
+
+</html>

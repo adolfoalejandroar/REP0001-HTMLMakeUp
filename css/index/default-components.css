@@ -1,0 +1,78 @@
+body {
+     font-family: 'Segoe UI';
+     font-size: 14px;
+     color: rgb(33, 33, 33);
+     background: rgb(198, 195, 255);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     background-attachment: fixed;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     margin: 0;
+}
+
+header {
+     width: 100%;
+     min-height: 200px;
+     max-height: 300px;
+     position: relative;
+     top: 0;
+     left: 0;
+     right: 0;
+     margin: 0;
+     flex-shrink: 0;
+}
+
+header>div>div>h1 {
+     text-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+     text-align: left;
+     font-size: clamp(1.5rem, 5vw, 3rem);
+     max-width: 60%;
+     text-wrap: wrap;
+     margin-bottom: 10px;
+}
+
+header>div>div>p {
+     text-align: left;
+     font-size: clamp(1rem, 1vw, 1.5rem);
+     max-width: 60%;
+     text-wrap: wrap;
+     margin-top: 10px;
+}
+
+li {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 10px;
+
+     a {
+          text-decoration: none;
+          color: #505050;
+          font-size: 25px;
+          font-weight: 400;
+          transition: all 0.5s ease-in-out;
+          position: relative;
+          text-transform: uppercase;
+
+          &:hover {
+               font-size: 28px;
+               color: #000000;
+               text-decoration: overline;
+               filter: drop-shadow(0 4px 30px rgba(0, 0, 0, 0.2));
+          }
+     }
+}
+
+footer {
+     width: 100%;
+     flex: 0 0 auto;
+     position: relative;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     margin: 0;
+     flex-shrink: 0;
+}

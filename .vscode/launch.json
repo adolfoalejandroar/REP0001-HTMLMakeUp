@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "e:/Users/Adolfo/OneDrive/Documentos/ACADEMICO/UFPS/2025/QUINTO SEMESTRE/PRWB/D-AU-2025QS-PRWB0002-Portafolio v2/js",
+      "program": "e:/Users/Adolfo/OneDrive/Documentos/ACADEMICO/UFPS/2025/QUINTO SEMESTRE/PRWB/D-AU-2025QS-PRWB0002-Portafolio v2/js/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
