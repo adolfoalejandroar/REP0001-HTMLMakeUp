@@ -67,6 +67,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                 });
             });
 
+            clone.querySelector('#info-btn').addEventListener('click', async (event) => {
+                console.log('info-btn');
+                document.body.classList.add('fade-out');
+                setTimeout(function () {
+                    window.location.href = './viewProf.html';
+                }, 1000);
+            });
+
             studentsList.appendChild(clone);
         });
     }
@@ -76,8 +84,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 });
 
+
+
 /**
- * Esta función crea un trabajador
+ * Esta función crea un trabajador. Como no se ha cargado, funciona...
  */
 document.getElementById('submit').addEventListener('click', async (event) => {
     event.preventDefault();
@@ -112,35 +122,33 @@ document.getElementById('submit').addEventListener('click', async (event) => {
 
 
 /**
- * Esta función actualiza un trabajador
+ * ESTA FUNCIÓN NUNCA SE EJECUTA, SUPRIMIR, YA SE LLAMA EN EL DOMContentLoaded
  */
-document.getElementById('edit').addEventListener('click', async (event) => {
-    event.preventDefault();
+// document.getElementById('edit').addEventListener('click', async (event) => {
+//     event.preventDefault();
 
-    const name = document.getElementById('edit-name').value;
-    const code = document.getElementById('edit-code').value;
-    const email = document.getElementById('edit-email').value;
-    const github = document.getElementById('edit-github').value;
-    const photo = document.getElementById('edit-photourl').value;
-    const description = document.getElementById('edit-description').value;
+//     const name = document.getElementById('edit-name').value;
+//     const code = document.getElementById('edit-code').value;
+//     const email = document.getElementById('edit-email').value;
+//     const github = document.getElementById('edit-github').value;
+//     const photo = document.getElementById('edit-photourl').value;
+//     const description = document.getElementById('edit-description').value;
 
-    const student = {
-        name,
-        code,
-        email,
-        github_link: github,
-        photo,
-        description
-    };
+//     const student = {
+//         name,
+//         code,
+//         email,
+//         github_link: github,
+//         photo,
+//         description
+//     };
 
-    console.log('Updating student:', student);
-
-    try {
-        await api.updateStudent(code, student);
-        alert('Student updating successfully!');
-        window.location.href = './index.html';
-    } catch (error) {
-        console.error('Error creating student:', error);
-        alert('Failed to create student.');
-    }
-});
+//     try {
+//         await api.updateStudent(code, student);
+//         alert('Student updating successfully!');
+//         window.location.href = './index.html';
+//     } catch (error) {
+//         console.error('Error creating student:', error);
+//         alert('Failed to create student.');
+//     }
+// });
