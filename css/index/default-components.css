@@ -13,6 +13,12 @@ body {
      margin: 0;
 }
 
+body.fade-out {
+     opacity: 0;
+     transition: opacity 1s;
+ }
+ 
+
 header {
      width: 100%;
      min-height: 200px;
