@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 window.open(student.github_link, '_blank');
             });
 
+            
+
             clone.querySelector('#edit-btn').addEventListener('click', () => {
                 const modalTemplate = document.getElementById('studentEditCard');
                 const modalClone = modalTemplate.content.cloneNode(true);
