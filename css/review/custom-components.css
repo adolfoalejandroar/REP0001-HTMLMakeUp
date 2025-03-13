@@ -142,6 +142,11 @@ body {
                 }
 
                 .tech-button {
+                    .tech-icon {
+                        width: 5em;
+                        image-resolution: 1/1;
+                        margin: 10px;
+                    }
                     i {
                         font-size: 3em;
                         margin: 10px;
