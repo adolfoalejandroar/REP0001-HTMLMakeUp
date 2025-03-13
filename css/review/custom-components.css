@@ -40,6 +40,12 @@ body {
     padding: 30px;
 }
 
+i {
+    width: 100%;
+    font-size: 3em;
+    margin: 10px;
+}
+
 .review-panel {
     display: flex;
     flex-direction: row;
@@ -63,17 +69,24 @@ body {
         border-radius: 10px;
 
         .review-subdiv {
-            display: flex;
+            display: flexbox;
             flex-direction: column;
-            align-items: center;
+            align-items: self-start;
             justify-content: center;
             margin: 10px;
-            height: 100%;
+            padding: 30px;
+            height: 80%;
+            width: 50%;
+
+            .glass-panel {
+                margin-right: 5px;
+                margin-left: 5px;
+                margin-top: 10px;
+                border-radius: 5px;
+            }
         }
 
         .view-metadata {
-            margin: 10px;
-            margin-right: 20px;
             text-align: justify;
         }
 
@@ -83,6 +96,15 @@ body {
             text-wrap: normal;
             flex-wrap: wrap;
             word-wrap: normal;
+            text-align: center;
+        }
+
+        .view-code {
+            text-align: center;
+        }
+
+        .view-email {
+            text-align: center;
         }
 
         .view-avatar {
@@ -147,10 +169,6 @@ body {
                         image-resolution: 1/1;
                         margin: 10px;
                     }
-                    i {
-                        font-size: 3em;
-                        margin: 10px;
-                    }
 
                     &:active {
                         background-color: white;
@@ -181,5 +199,15 @@ body {
                 }
             }
         }
+    }
+}
+
+.return-p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    * {
+        text-decoration: none;
     }
 }
