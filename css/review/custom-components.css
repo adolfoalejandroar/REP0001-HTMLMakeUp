@@ -16,6 +16,10 @@
     bottom: 0;
 }
 
+.glass-form-panel {
+    width: 80%;
+}
+
 .review-panel {
     display: flex;
     flex-direction: row;
