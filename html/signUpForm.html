@@ -1,64 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>SignUp</title>
-     <link href="../css/index/stage-components.css" rel="stylesheet">
-     <link href="../css/index/default-components.css" rel="stylesheet">
-     <link href="../css/index/custom-components.css" rel="stylesheet">
-     <link href="../css/form/custom-components.css" rel="stylesheet">
-     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-</head>
-
-<body>
-     <div class="background">
-          <img src="../resources/src0006-prism.png" class="cylinder" style="top: 40%; left: 50%;">
-          <img src="../resources/src0006-prism.png" class="sphere-3" style="top: 10%; left: 10%;">
-          <img src="../resources/src0006-prism.png" class="sphere-1" style="top: 20%; left: 40%;">
-          <img src="../resources/src0006-prism.png" class="sphere-1" style="top: 100%; left: 10%;">
-          <img src="../resources/src0006-prism.png" class="sphere-2" style="top: 20%; left: 60%;">
-     </div>
-     <div class="content">
-          <section class="signUp_form">
-               <div class="glass-form-panel" style="flex-direction: column;">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SignUp</title>
+        <link href="../css/index/stage-components.css" rel="stylesheet">
+        <link href="../css/index/default-components.css" rel="stylesheet">
+        <link href="../css/index/custom-components.css" rel="stylesheet">
+        <link href="../css/form/custom-components.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="background">
+            <img src="../resources/src0006-prism.png" class="cylinder" style="top: 40%; left: 50%;">
+            <img src="../resources/src0006-prism.png" class="sphere-3" style="top: 10%; left: 10%;">
+            <img src="../resources/src0006-prism.png" class="sphere-1" style="top: 20%; left: 40%;">
+            <img src="../resources/src0006-prism.png" class="sphere-1" style="top: 100%; left: 10%;">
+            <img src="../resources/src0006-prism.png" class="sphere-2" style="top: 20%; left: 60%;">
+        </div>
+        <div class="content">
+            <section class="signUp_form">
+                <div class="glass-form-panel" style="flex-direction: column;">
                     <div class="field-row">
-                         <label for="name">Name</label>
-                         <input class="glass-panel" type="text" id="name" name="name" placeholder="Enter your name">
+                        <label for="name">Name</label>
+                        <input
+                            class="glass-panel"
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                        >
                     </div>
                     <div class="field-row">
-                         <label for="code">Code</label>
-                         <input class="glass-panel" type="number" id="code" name="code" placeholder="Enter your code">
+                        <label for="code">Code</label>
+                        <input
+                            class="glass-panel"
+                            type="number"
+                            id="code"
+                            name="code"
+                            placeholder="Enter your code"
+                        >
                     </div>
                     <div class="field-row">
-                         <label for="email">Email</label>
-                         <input class="glass-panel" type="email" id="email" name="email" placeholder="Enter your email">
+                        <label for="email">Email</label>
+                        <input
+                            class="glass-panel"
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                        >
                     </div>
                     <div class="field-row">
-                         <label for="github">Github Link</label>
-                         <input class="glass-panel" type="url" id="github" name="github"
-                              placeholder="Enter your github link">
+                        <label for="github">Github Link</label>
+                        <input
+                            class="glass-panel"
+                            type="url"
+                            id="github"
+                            name="github"
+                            placeholder="Enter your github link"
+                        >
                     </div>
                     <div class="field-row">
-                         <label for="photourl">Photo URL</label>
-                         <input class="glass-panel" type="url" id="photourl" name="photourl"
-                              placeholder="Enter your photo url">
+                        <label for="photourl">Photo URL</label>
+                        <input
+                            class="glass-panel"
+                            type="url"
+                            id="photourl"
+                            name="photourl"
+                            placeholder="Enter your photo url"
+                        >
                     </div>
                     <div class="field-row">
-                         <label for="description">Description</label>
-                         <textarea class="glass-panel" id="description" name="description"
-                              placeholder="Enter your description"
-                              style="width: 100%; height: 300px; resize: none;"></textarea>
+                        <label for="description">Description</label>
+                        <textarea
+                            class="glass-panel"
+                            id="description"
+                            name="description"
+                            placeholder="Enter your description"
+                            style="width: 100%; height: 300px; resize: none; white-space: pre-wrap;"
+                        ></textarea>
                     </div>
                     <div class="field-row">
-                         <button class="glass-panel" id="submit" name="submit">Submit</button>
+                        <button class="glass-panel" id="submit" name="submit">Submit</button>
                     </div>
-               </div>
-          </section>
-     </div>
-     <script src="../js/api.js"></script>
-     <script src="../js/app.js"></script>
-</body>
-
+                </div>
+            </section>
+        </div>
+        <script src="../js/api.js"></script>
+        <script src="../js/app.js"></script>
+    </body>
 </html>

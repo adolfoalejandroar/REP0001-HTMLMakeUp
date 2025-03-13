@@ -1,54 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/index/stage-components.css" rel="stylesheet">
-    <link href="../css/index/default-components.css" rel="stylesheet">
-    <link href="../css/index/custom-components.css" rel="stylesheet">
-    <link href="../css/form/custom-components.css" rel="stylesheet">
-    <link href="../css/review/custom-components.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <title>Document</title>
-</head>
-
-<body>
-    <div class="background">
-        <img src="../resources/src0007-hexagon01.png" class="cylinder" style="top: 40%; left: 50%;">
-        <img src="../resources/src0008-hexagon02.png" class="sphere-3" style="top: 10%; left: 10%;">
-        <img src="../resources/src0009-hexagon03.png" class="sphere-1" style="top: 20%; left: 40%;">
-        <img src="../resources/src0007-hexagon01.png" class="sphere-1" style="top: 10%; left: 10%;">
-        <img src="../resources/src0008-hexagon02.png" class="sphere-2" style="top: 20%; left: 60%;">
-    </div>
-    <div class="content">
-        <section class="centered-form">
-            <div class="glass-form-panel">
-                <div class="review-panel" style="border: 1px solid green !important;">
-                    <div class="glass-panel" style="flex-direction: row;">
-                        <div class="review-subdiv">
-                            <img src="https://cdn2.iconfinder.com/data/icons/delivery-and-logistic/64/Not_found_the_recipient-no_found-person-user-search-searching-4-1024.png"
-                                alt="Avatar" class="view-avatar" id="view-avatar">
-                            <h2 class="view-name view-metadata" id="view-name">Nombre</h2>
-                            <p class="view-email view-metadata">Email</p>
-                            <p class="view-code view-metadata">Codigo</p>
-                        </div>
-                        <div class="review-subdiv">
-                            <p class="view-description view-metadata">Lorem ipsum dolor sit amet, consectetur
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/index/stage-components.css" rel="stylesheet">
+        <link href="../css/index/default-components.css" rel="stylesheet">
+        <link href="../css/index/custom-components.css" rel="stylesheet">
+        <link href="../css/form/custom-components.css" rel="stylesheet">
+        <link href="../css/review/custom-components.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="background">
+            <img src="../resources/src0007-hexagon01.png" class="cylinder" style="top: 40%; left: 50%;">
+            <img src="../resources/src0008-hexagon02.png" class="sphere-3" style="top: 10%; left: 10%;">
+            <img src="../resources/src0009-hexagon03.png" class="sphere-1" style="top: 20%; left: 40%;">
+            <img src="../resources/src0007-hexagon01.png" class="sphere-1" style="top: 10%; left: 10%;">
+            <img src="../resources/src0008-hexagon02.png" class="sphere-2" style="top: 20%; left: 60%;">
+        </div>
+        <div class="content">
+            <section class="centered-form">
+                <div class="glass-form-panel">
+                    <div class="review-panel">
+                        <div class="glass-panel info-panel" style="flex-direction: row;">
+                            <div class="review-subdiv" style="min-width: 50%;">
+                                <img
+                                    src="https://cdn2.iconfinder.com/data/icons/delivery-and-logistic/64/Not_found_the_recipient-no_found-person-user-search-searching-4-1024.png"
+                                    alt="Avatar"
+                                    class="view-avatar"
+                                    id="view-avatar"
+                                >
+                                <h2 class="view-name view-metadata" id="view-name">Nombre</h2>
+                                <p class="view-code view-metadata" id="view-code">
+                                    <b>Codigo</b>
+                                </p>
+                                <p class="view-email view-metadata" id="view-email">
+                                    <i>Email</i>
+                                </p>
+                            </div>
+                            <div class="review-subdiv">
+                                <p class="view-description view-metadata" id="view-description">
+                                    Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit. Quo voluptatum natus delectus incidunt beatae repudiandae tempora
                                 dolorum, esse, perspiciatis dolores sed, vero impedit fugit expedita aperiam. Natus non
-                                deleniti earum.</p>
+                                deleniti earum.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tech-display">
+                            <div class="tech-panel glass-panel">
+                                <div class="tech-conjunt">
+                                    <h2 class="tech-name" id="tech-name">Technology</h2>
+                                    <button class="tech-button glass-panel" id="tech-button">
+                                        <i class="ri-edit-circle-fill"></i>
+                                    </button>
+                                </div>
+                                <div class="tech-calification">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="glass-panel tech-panel">
-                        <div class="glass-panel">Tech</div>
-                        <div class="glass-panel">Tech</div>
-                        <div class="glass-panel">Tech</div>
-                    </div>
+                </div>
+            </section>
+        </div>
+        <template id="tech-template">
+            <div class="tech-panel glass-panel">
+                <div class="tech-conjunt">
+                    <h2 class="tech-name" id="tech-name">Technology</h2>
+                    <button class="tech-button glass-panel" id="tech-button">
+                        <i class="ri-edit-circle-fill"></i>
+                    </button>
+                </div>
+                <div class="tech-calification">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
                 </div>
             </div>
-        </section>
-    </div>
-</body>
-
+        </template>
+        <script src="../js/api.js"></script>
+        <script src="../js/app.js"></script>
+        <script src="../js/view.js"></script>
+    </body>
 </html>
