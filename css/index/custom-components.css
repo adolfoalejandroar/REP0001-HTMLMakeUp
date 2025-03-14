@@ -92,18 +92,23 @@
 }
 
 .menuItems {
-     align-items: left;
+     align-items: center; /* Cambiado de 'left' a 'center' */
      justify-content: left;
      list-style: none;
      display: flex;
-     flex-wrap: wrap;
+     flex-wrap: nowrap; /* Cambiado de 'wrap' a 'nowrap' */
      flex-direction: row;
+     width: 90%;
 }
 
 .search-box {
      width: fit-content;
      height: fit-content;
      position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center; /* Añadido para centrar verticalmente */
+     max-width: 50%;
 }
 
 .input-search {

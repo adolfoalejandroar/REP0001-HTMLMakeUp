@@ -89,11 +89,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     await renderStudents();
 
     // Search functionality
-    document.getElementById('search-input').addEventListener('input', (event) => {
-        const filter = event.target.value;
-        renderStudents(filter);
+    document.getElementById('search-input').addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            const filter = event.target.value;
+            renderStudents(filter);
+        }
     });
-
 });
 
 /**
