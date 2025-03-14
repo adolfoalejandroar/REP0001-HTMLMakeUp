@@ -55,6 +55,39 @@ document.addEventListener('DOMContentLoaded', async () => {
                     }
                 });
             });
+
+            clone.querySelector('#delete-button').addEventListener('click', () => {
+                const modalTemplate = document.getElementById('are-u-sure');
+                const modalClone = modalTemplate.content.cloneNode(true);
+                document.body.appendChild(modalClone);
+
+                const modal = document.querySelector('#are-u-sure-panel');
+
+                modal.querySelector('.close').addEventListener('click', () => {
+                    modal.style.display = 'none';
+                    document.body.removeChild(modal);
+                });
+
+                modal.querySelector('#no').addEventListener('click', () => {
+                    modal.style.display = 'none';
+                    document.body.removeChild(modal);
+                });
+
+                modal.querySelector('#yes').addEventListener('click', async () => {
+                    const studentCode = student.code;
+                    const technologyCode = tech.technology.code;
+                    try {
+                        await api.deleteStudentTechnology(studentCode, technologyCode);
+                        alert('Technology updated successfully!');
+                        modal.style.display = 'none';
+                        document.body.removeChild(modal);
+                        await renderTechs();
+                    } catch (error) {
+                        console.error('Error updating technology:', error);
+                        alert('Failed to updating this technology.');
+                    }
+                });
+            });
             const stars = clone.querySelectorAll('.fa-star');
             for (let i = 0; i < stars.length; i++) {
                 if (i < tech.level) {
@@ -66,7 +99,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             techList.appendChild(clone);
         });
 
-        document.getElementById('add-tech-button').addEventListener('click', () => {
+        document.getElementById('add-tech-button').addEventListener('click', async () => {
             const modalTemplate = document.getElementById('addTech');
             const modalClone = modalTemplate.content.cloneNode(true);
             document.body.appendChild(modalClone);
@@ -78,29 +111,34 @@ document.addEventListener('DOMContentLoaded', async () => {
                 document.body.removeChild(modal);
             });
 
+            const allTechnologies = await api.getTechnologies();
+            const studentTechnologies = await api.getStudentTechnologies(student.code);
+            const studentTechCodes = studentTechnologies.map(tech => tech.technology.code);
+            const availableTechnologies = allTechnologies.filter(tech => !studentTechCodes.includes(tech.code));
+
+            const selectTech = modal.querySelector('#select-tech');
+            availableTechnologies.forEach(tech => {
+                const option = document.createElement('option');
+                option.value = tech.code;
+                option.textContent = tech.name;
+                selectTech.appendChild(option);
+            });
+
             modal.querySelector('.addTechnology').addEventListener('click', async (event) => {
                 event.preventDefault();
-                const techImage = modal.querySelector('#add-image').value;
-                const techName = modal.querySelector('#add-name').value;
-                const techCode = modal.querySelector('#add-code').value;
-                const techLevel = modal.querySelector('#add-level').value;
+                const techTechn = modal.querySelector('#select-tech').value;
+                const techLevel = modal.querySelector('#select-level').value;
                 const studentTech = {
                     level: techLevel,
                     student_code: student.code,
-                    technology: {
-                        code: techCode,
-                        image: techImage,
-                        name: techName
-                    },
-                    technology_code: techCode
+                    technology_code: techTechn
                 };
-                console.log(studentTech);
                 try {
                     await api.addStudentTechnology(studentTech);
                     alert('Technology added successfully!');
                     modal.style.display = 'none';
                     document.body.removeChild(modal);
-                    await renderTechs();
+                    location.reload();
                 } catch (error) {
                     console.error('Error adding technology:', error);
                     alert('Failed to add this technology.');

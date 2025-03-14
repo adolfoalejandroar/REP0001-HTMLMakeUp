@@ -96,8 +96,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 });
 
-
-
 /**
  * Esta función crea un trabajador. Como no se ha cargado, funciona...
  */

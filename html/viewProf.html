@@ -57,7 +57,7 @@
                         <div class="tech-display">
                             <div id="tech-display"></div>
                             <div class="tech-panel">
-                                <button class="tech-button glass-panel" id="add-tech-button">
+                                <button class="tech-button glass-panel" id="add-tech-button" style="margin: 10px;">
                                     <i class="ri-add-circle-fill"></i>
                                 </button>
                             </div>
@@ -73,6 +73,9 @@
                     <button class="tech-button glass-panel" id="tech-button">
                         <i class="ri-edit-circle-fill"></i>
                         <img class="tech-icon" scr="">
+                    </button>
+                    <button class="tech-button glass-panel" id="delete-button" style="margin: 0px; margin-right: 5px;">
+                        <i class="ri-delete-back-2-line"></i>
                     </button>
                 </div>
                 <div class="tech-calification">
@@ -121,41 +124,14 @@
                 <div class="modal-content">
                     <h2>Add a New Technology</h2>
                     <div class="field-row">
-                        <label for="name">Name *:</label>
-                        <input
-                            class="glass-panel"
-                            type="text"
-                            id="add-name"
-                            name="name"
-                            value=""
-                            required
-                        >
-                    </div>
-                    <div class="field-row">
-                        <label for="name">Code *:</label>
-                        <input
-                            class="glass-panel"
-                            type="text"
-                            id="add-code"
-                            name="name"
-                            value=""
-                            required
-                        >
-                    </div>
-                    <div class="field-row">
-                        <label for="img-url">Image *:</label>
-                        <input
-                            class="glass-panel"
-                            type="text"
-                            id="add-image"
-                            name="img-url"
-                            value=""
-                            required
-                        >
+                        <label for="level">Technology *:</label>
+                        <select class="glass-panel" id="select-tech">
+                            <option value="0"></option>
+                        </select>
                     </div>
                     <div class="field-row">
                         <label for="level">Level *:</label>
-                        <select class="glass-panel" id="add-level">
+                        <select class="glass-panel" id="select-level">
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -167,6 +143,24 @@
                     <div class="field-row">
                         <button class="addTechnology glass-panel">
                             <i class="ri-check-line" style="font-size: 20px;"></i>
+                        </button>
+                    </div>
+                </div>
+                <span class="close">
+                    <i class="ri-close-circle-fill"></i>
+                </span>
+            </div>
+        </template>
+        <template id="are-u-sure">
+            <div class="edit-profile-panel glass-panel" id="are-u-sure-panel">
+                <div class="modal-content">
+                    <h2>Are you sure?</h2>
+                    <div class="field-row">
+                        <button class="btn-save glass-panel" id="yes">
+                            <i class="ri-check-line" style="font-size: 20px;"></i>
+                        </button>
+                        <button class="btn-save glass-panel" id="no">
+                            <i class="ri-close-line" style="font-size: 20px;"></i>
                         </button>
                     </div>
                 </div>
