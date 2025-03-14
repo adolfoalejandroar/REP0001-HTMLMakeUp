@@ -40,7 +40,9 @@
                                     <i>Email</i>
                                 </p>
                                 <p class="view-email view-metadata return-p">
-                                    <a href="../index.html"><i class="ri-arrow-left-line"></i></a>
+                                    <a href="../index.html">
+                                        <i class="ri-arrow-left-line"></i>
+                                    </a>
                                 </p>
                             </div>
                             <div class="review-subdiv" style="padding-left:10px; padding-right:10px; background: rgba(255, 255, 255, 0.8); border-radius: 5px;">
@@ -52,7 +54,14 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="tech-display" id="tech-display"></div>
+                        <div class="tech-display">
+                            <div id="tech-display"></div>
+                            <div class="tech-panel">
+                                <button class="tech-button glass-panel" id="add-tech-button">
+                                    <i class="ri-add-circle-fill"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -73,6 +82,74 @@
                     <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span>
                 </div>
+            </div>
+        </template>
+        <template id="studentEditCard">
+            <div class="edit-profile-panel glass-panel" id="edit-tech-panel">
+                <div class="modal-content">
+                    <h2>Edit Tech -</h2>
+                    <div class="field-row">
+                        <label for="name">Name:</label>
+                        <label class="glass-panel" id="edit-name" value=""></label>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-row">
+                            <label for="level">Level:</label>
+                            <select class="glass-panel" id="edit-level">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <button class="btn-save glass-panel" id="edit">
+                            <i class="ri-check-line" style="font-size: 20px;"></i>
+                        </button>
+                    </div>
+                </div>
+                <span class="close">
+                    <i class="ri-close-circle-fill"></i>
+                </span>
+            </div>
+        </template>
+        <template id="addTech">
+            <div class="edit-profile-panel glass-panel" id="add-tech-panel">
+                    <div class="modal-content">
+                        <h2>Add a New Technology</h2>
+                        <div class="field-row">
+                            <label for="name">Name *:</label>
+                            <input class="glass-panel" type="text" id="add-name" name="name" value="" required>
+                        </div>
+                        <div class="field-row">
+                            <label for="name">Code *:</label>
+                            <input class="glass-panel" type="text" id="add-code" name="name" value="" required>
+                        </div>
+                        <div class="field-row">
+                            <label for="img-url">Image *:</label>
+                            <input class="glass-panel" type="text" id="add-image" name="img-url" value="" required>
+                        </div>
+                        <div class="field-row">
+                            <label for="level">Level *:</label>
+                            <select class="glass-panel" id="add-level">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="field-row">
+                            <button class="addTechnology glass-panel">
+                                <i class="ri-check-line" style="font-size: 20px;"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <span class="close"><i class="ri-close-circle-fill"></i></span>
             </div>
         </template>
         <script src="../js/api.js"></script>

@@ -162,27 +162,7 @@ i {
                     flex-wrap: wrap;
                     word-wrap: normal;
                 }
-
-                .tech-button {
-                    .tech-icon {
-                        width: 5em;
-                        image-resolution: 1/1;
-                        margin: 10px;
-                    }
-
-                    &:active {
-                        background-color: white;
-                        color: #007bff;
-                        transform: scale(0.9);
-                    }
-
-                    &:hover {
-                        background-color: rgba(255, 255, 255, 0.6);
-                        transition: background-color 0.3s ease, color 0.3s ease;
-                    }
-                }
             }
-
 
             .tech-calification {
                 width: 90%;
@@ -209,5 +189,24 @@ i {
 
     * {
         text-decoration: none;
+    }
+}
+
+.tech-button {
+    .tech-icon {
+        width: 5em;
+        image-resolution: 1/1;
+        margin: 10px;
+    }
+
+    &:active {
+        background-color: white;
+        color: #007bff;
+        transform: scale(0.9);
+    }
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.6);
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
 }
